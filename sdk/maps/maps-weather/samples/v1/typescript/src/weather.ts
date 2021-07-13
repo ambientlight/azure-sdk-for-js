@@ -7,7 +7,7 @@
 
 import { getDefaultAzureCredential } from "@azure/identity";
 import * as coreAuth from "@azure/core-auth";
-import * as coreClient from "@azure/core-client";
+import { OperationOptions } from '@azure/core-http';
 import { WeatherClient } from "@azure/maps-weather";
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -42,7 +42,7 @@ class EmptyTokenCredential implements coreAuth.TokenCredential {
 
 async function main() {
   let credential: coreAuth.TokenCredential;
-  let operationOptions: coreClient.OperationOptions = {};
+  let operationOptions: OperationOptions = {};
 
   if (process.env.MAPS_SUBSCRIPTION_KEY) {
     // Use subscription key authentication

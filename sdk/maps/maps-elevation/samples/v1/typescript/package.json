@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/maps/maps-elevation",
   "dependencies": {
-    "@azure/maps-elevation": "next",
+    "@azure/maps-elevation": "../../../",
     "dotenv": "latest",
     "@azure/identity": "^1.1.0"
   },

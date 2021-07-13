@@ -1,0 +1,19 @@
+{
+  "extends": "../../../tsconfig.package",
+  "compilerOptions": {
+    "outDir": "./dist-esm",
+    "declarationDir": "./types",
+    "paths": {
+      "@azure/maps-render": [
+        "./src/generated/index"
+      ]
+    },
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "samples-dev/**/*.ts"
+  ]
+}
