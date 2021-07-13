@@ -10,7 +10,8 @@
     ],
     "declaration": true,
     "outDir": "./dist-esm",
-    "declarationDir": "./types"
+    "declarationDir": "./types",
+    "noUnusedLocals": false
   },
   "include": [
     "./src/**/*.ts",

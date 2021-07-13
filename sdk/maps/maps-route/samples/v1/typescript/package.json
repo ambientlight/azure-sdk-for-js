@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/maps/maps-route",
   "dependencies": {
-    "@azure/maps-route": "next",
+    "@azure/maps-route": "../../../",
     "dotenv": "latest",
     "@azure/identity": "^1.1.0"
   },

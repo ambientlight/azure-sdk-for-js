@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { ContainerClient, BlockBlobClient } from "@azure/storage-blob";
+//import { ContainerClient, BlockBlobClient } from "@azure/storage-blob";
 import { QuantumJobClient } from "../../src";
 import { authenticate } from "../utils/testAuthentication";
 import { Recorder } from "@azure/test-utils-recorder";
@@ -72,8 +72,8 @@ describe("Quantum job lifecycle", () => {
 
     // Create container if not exists (if not in Playback mode)
     if (!isPlaybackMode()) {
-      const containerClient = new ContainerClient(containerUri, credentials);
-      await containerClient.createIfNotExists();
+      //const containerClient = new ContainerClient(containerUri, credentials);
+      //await containerClient.createIfNotExists();
     }
 
     // Get input data blob Uri with SAS key
@@ -92,10 +92,12 @@ describe("Quantum job lifecycle", () => {
 
     // Upload input data to blob (if not in Playback mode)
     if (!isPlaybackMode()) {
+      /*
       const blobClient = new BlockBlobClient(inputDataUri, credentials);
       const problemFilename = "./test/problem.json";
       const fileContent = fs.readFileSync(problemFilename, "utf8");
       await blobClient.upload(fileContent, Buffer.byteLength(fileContent));
+      */
     }
 
     // Submit job
